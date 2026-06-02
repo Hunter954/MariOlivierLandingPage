@@ -5,12 +5,11 @@ const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isInterse
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open){document.querySelectorAll('details').forEach(o=>{if(o!==d)o.open=false})}}));
 
-// Premium button click feedback
-function mariPremiumButtonClick(button){
-  button.classList.remove('clicked');
-  void button.offsetWidth;
-  button.classList.add('clicked');
-}
-document.querySelectorAll('.btn, .pill').forEach((button)=>{
-  button.addEventListener('click',()=>mariPremiumButtonClick(button));
+
+document.querySelectorAll('.premium-button').forEach((button)=>{
+  button.addEventListener('click',()=>{
+    button.classList.remove('clicked');
+    void button.offsetWidth;
+    button.classList.add('clicked');
+  });
 });
