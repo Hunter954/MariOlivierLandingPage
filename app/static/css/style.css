@@ -130,3 +130,224 @@ blockquote{
   .section-line{text-align:center}
   .cta h2{font-size:clamp(42px,12vw,60px)}
 }
+
+/* Botão premium glow com Bootstrap Icons - substitui o efeito anterior mantendo as escritas */
+.btn::before,
+.pill::before,
+.btn::after,
+.pill::after{
+  content:none!important;
+  display:none!important;
+}
+.btn,
+.pill{
+  --border-radius:9999px;
+  --transition:.35s ease;
+  --active:0;
+  cursor:pointer;
+  position:relative;
+  isolation:isolate;
+  overflow:visible;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.68rem;
+  border:0!important;
+  border-radius:var(--border-radius);
+  background:transparent!important;
+  color:#ffe4cc!important;
+  padding:1.08rem 2.55rem;
+  min-height:56px;
+  transform:scale(calc(1 + (var(--active) * .025)));
+  transition:transform var(--transition),filter var(--transition);
+  box-shadow:none!important;
+}
+.btn:hover,
+.btn:focus-visible,
+.pill:hover,
+.pill:focus-visible{
+  --active:1;
+  transform:scale(calc(1 + (var(--active) * .025))) translateY(-1px);
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.32));
+}
+.btn:active,
+.pill:active{
+  transform:scale(.97);
+}
+.btn > .text_button,
+.pill > .text_button{
+  position:relative;
+  z-index:10;
+  font-family:Inter,system-ui,sans-serif;
+  font-size:clamp(.72rem,1vw,.92rem);
+  font-weight:800;
+  line-height:1;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  background-image:linear-gradient(90deg,#fff4e8 0%,#f4c7a8 44%,#fff 50%,#f4c7a8 60%,#fff4e8 100%);
+  background-size:220% 100%;
+  background-position:left;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 18px rgba(255,183,122,.12);
+  transition:background-position .8s ease;
+}
+.btn:hover > .text_button,
+.pill:hover > .text_button{
+  background-position:right;
+}
+.btn > .sparkle,
+.pill > .sparkle{
+  position:relative;
+  z-index:10;
+  font-size:1.1rem;
+  line-height:1;
+  color:#ffe4cc;
+  filter:drop-shadow(0 0 8px rgba(255,161,90,.7));
+  transform-origin:center;
+}
+.btn:hover > .sparkle,
+.btn:focus-visible > .sparkle,
+.pill:hover > .sparkle,
+.pill:focus-visible > .sparkle{
+  animation:sparklePulsePremium 1.55s linear .15s infinite;
+}
+.btn > .dots_border,
+.pill > .dots_border{
+  --size-border:calc(100% + 4px);
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:var(--size-border);
+  height:var(--size-border);
+  transform:translate(-50%,-50%);
+  overflow:hidden;
+  border-radius:var(--border-radius);
+  z-index:-1;
+  pointer-events:none;
+}
+.btn > .dots_border::before,
+.pill > .dots_border::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:130%;
+  height:3.3rem;
+  transform-origin:left center;
+  transform:rotate(0deg);
+  background:linear-gradient(90deg,transparent 0%,rgba(255,142,67,.15) 20%,rgba(255,180,105,.85) 42%,rgba(255,239,212,1) 50%,rgba(255,180,105,.85) 58%,rgba(255,142,67,.15) 80%,transparent 100%);
+  filter:blur(1px);
+  animation:rotatePremiumBorder 7s linear infinite;
+}
+.btn > .dots_border::after,
+.pill > .dots_border::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:var(--border-radius);
+  border:1.5px solid rgba(255,225,205,.58);
+  pointer-events:none;
+}
+.btn .dots_border + .sparkle::after,
+.pill .dots_border + .sparkle::after{
+  content:"";
+  position:absolute;
+  inset:-.55rem;
+  z-index:-1;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,181,104,.22),transparent 62%);
+  opacity:var(--active);
+  transition:opacity var(--transition);
+}
+.btn::marker,
+.pill::marker{display:none}
+.btn.clicked,
+.pill.clicked{
+  animation:clickPopPremium .45s ease;
+}
+.btn > .dots_border + .sparkle ~ .text_button,
+.pill > .dots_border + .sparkle ~ .text_button{pointer-events:none}
+.btn:has(.dots_border),
+.pill:has(.dots_border){
+  background:transparent!important;
+}
+.btn:has(.dots_border) .dots_border,
+.pill:has(.dots_border) .dots_border{
+  box-shadow:0 12px 28px rgba(0,0,0,.36),0 0 0 calc(var(--active) * .38rem) rgba(255,145,72,.16);
+}
+.btn:has(.dots_border)::before,
+.pill:has(.dots_border)::before{
+  content:""!important;
+  display:block!important;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  border-radius:var(--border-radius);
+  background:linear-gradient(180deg,rgba(85,30,10,.96),rgba(37,10,3,.98));
+  box-shadow:inset 0 1px 0 rgba(255,232,210,.42),inset 0 -2px 8px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.35);
+  transition:all var(--transition);
+}
+.btn:has(.dots_border)::after,
+.pill:has(.dots_border)::after{
+  content:""!important;
+  display:block!important;
+  position:absolute;
+  inset:0;
+  z-index:2;
+  border-radius:var(--border-radius);
+  background:radial-gradient(circle at 50% 0%,rgba(255,202,150,.32),transparent 38%),radial-gradient(circle at 100% 100%,rgba(255,117,49,.24),transparent 45%),linear-gradient(180deg,rgba(110,39,13,.92),rgba(48,13,4,.95));
+  opacity:var(--active);
+  transition:opacity var(--transition);
+}
+.nav .pill{
+  padding:.86rem 1.45rem;
+  min-height:42px;
+}
+.nav .pill > .text_button{
+  font-size:.64rem;
+  letter-spacing:.14em;
+}
+.nav .pill > .sparkle{font-size:.88rem}
+.hero .btn{
+  padding:1.1rem 2.35rem;
+  min-height:58px;
+  margin-left:60px;
+}
+.hero .btn > .text_button{
+  font-size:.82rem;
+  letter-spacing:.12em;
+}
+.ghost{
+  background:transparent!important;
+}
+.card i.bi{
+  font-size:1rem;
+  font-style:normal;
+}
+@keyframes rotatePremiumBorder{to{transform:rotate(360deg)}}
+@keyframes sparklePulsePremium{
+  0%,34%,71%,100%{transform:scale(1) rotate(0deg)}
+  17%{transform:scale(1.24) rotate(8deg)}
+  49%{transform:scale(1.32) rotate(-8deg)}
+  83%{transform:scale(1.18) rotate(6deg)}
+}
+@keyframes clickPopPremium{
+  0%{transform:scale(1)}
+  45%{transform:scale(.96)}
+  75%{transform:scale(1.04)}
+  100%{transform:scale(1)}
+}
+@media(max-width:900px){
+  .btn,.pill{padding:.98rem 1.45rem;min-height:50px;gap:.5rem}
+  .btn > .text_button,.pill > .text_button{font-size:.68rem;letter-spacing:.1em}
+  .btn > .sparkle,.pill > .sparkle{font-size:1rem}
+  .hero .btn{margin-left:0;padding:1rem 1.5rem}
+}
+@media(max-width:420px){
+  .btn,.pill{width:100%;max-width:360px}
+  .cta-actions .btn{width:100%}
+  .btn > .text_button,.pill > .text_button{white-space:normal;line-height:1.2;text-align:center}
+}
