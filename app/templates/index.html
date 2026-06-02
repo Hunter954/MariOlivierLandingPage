@@ -7,16 +7,16 @@
   <meta name="description" content="Mentoria, consultoria de imagem, palestras e experiências com Mari Olivier.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="site-bg"></div>
   <header class="nav glass">
     <nav class="nav-inner container">
-      <div class="nav-left"><a href="#inicio">Início</a><a href="#sobre">Sobre</a></div>
+      <div class="nav-left"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a><a href="#experiencias">Experiências</a></div>
       <a class="logo" href="#inicio"><img src="{{ url_for('static', filename='img/brand-logo.png') }}" alt="Mari Olivier"></a>
-      <div class="nav-right"><a href="#mentoria">Mentoria</a><a href="#experiencias">Experiências</a><a class="pill" href="#contato">Falar com Mari</a></div>
+      <div class="nav-right"><a class="pill" href="#contato">Assinar agora</a></div>
       <button class="menu" aria-label="Menu">☰</button>
     </nav>
   </header>
@@ -50,7 +50,7 @@
         <div><strong>Imagem</strong><small>como extensão da identidade</small></div>
         <div><strong>Presença</strong><small>como força de posicionamento</small></div>
       </div>
-      <p class="section-line">Assista e descubra como a sua imagem pode contar uma nova história.</p>
+      <p class="container section-line">Assista e descubra como a sua imagem pode contar uma nova história.</p>
     </section>
 
     <section id="mentoria" class="section cards-section">
@@ -89,7 +89,7 @@
 
     <section id="sobre" class="section about">
       <div class="container about-grid reveal">
-        <div class="photo-placeholder"><span>MO</span><small>Espaço reservado para retrato profissional</small></div>
+        <div class="photo-placeholder photo-real"><img src="{{ url_for('static', filename='img/mari-about.jpg') }}" alt="Mari Olivier"></div>
         <div>
           <p class="eyebrow">Autoridade</p>
           <h2>Quem é <span>Mari Olivier</span></h2>
@@ -131,7 +131,7 @@
           <article><small>03</small><h3>Eventos e desfiles</h3><p>Criação, direção e desenvolvimento de experiências que unem estética, propósito, moda e comunicação.</p></article>
           <article><small>04</small><h3>Rainhas e candidatas</h3><p>Trabalho voltado à postura, presença, elegância, comunicação, confiança e posicionamento.</p></article>
         </div>
-        <div class="center"><a class="btn" href="#contato">Levar Mari Olivier para o meu evento</a></div>
+        <div class="center event-cta"><a class="btn" href="#contato">Levar Mari Olivier para o meu evento</a></div>
       </div>
     </section>
 
@@ -150,7 +150,7 @@
 
     <section id="contato" class="section cta redwash">
       <div class="container narrow center reveal">
-        <h2>Sua imagem pode abrir<br>caminhos antes mesmo da<br>primeira <span>palavra.</span></h2>
+        <h2>Sua imagem pode abrir<br>caminhos antes mesmo&nbsp;da<br>primeira <span>palavra.</span></h2>
         <p>Descubra como alinhar aparência, essência e comunicação para expressar sua melhor versão com autenticidade, presença e significado.</p>
         <div class="cta-actions"><a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20falar%20com%20Mari%20Olivier">Falar com Mari Olivier</a><a class="btn ghost" href="#experiencias">Quero saber mais sobre palestras</a></div>
         <form class="lead-form" action="/contato" method="post">
@@ -161,7 +161,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner"><div><strong>Mari Olivier</strong><small>Imagem, identidade e presença.</small></div><div class="social"><span>◎</span><span>☏</span><span>✉</span></div><small>© 2026 Mari Olivier - Todos os direitos reservados</small></div>
+    <div class="container footer-inner"><div><img class="footer-logo" src="{{ url_for('static', filename='img/brand-logo.png') }}" alt="Mari Olivier"><small>Imagem, identidade e presença.</small></div><div class="social"><span>◎</span><span>☏</span><span>✉</span></div><small>© 2026 Mari Olivier - Todos os direitos reservados</small></div>
   </footer>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
