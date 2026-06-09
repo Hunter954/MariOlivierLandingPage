@@ -408,3 +408,9 @@ blockquote{
   .services.services-five{grid-template-columns:1fr}
   .services.services-five article:last-child{grid-column:auto}
 }
+/* Quebra de linha do título principal apenas no desktop */
+.desktop-title-break{display:block;}
+
+@media(max-width:900px){
+  .desktop-title-break{display:none;}
+}
