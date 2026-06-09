@@ -15,7 +15,7 @@
   <div class="site-bg"></div>
   <header class="nav glass">
     <nav class="nav-inner container">
-      <div class="nav-left"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a><a href="#experiencias">Experiências</a></div>
+      <div class="nav-left"><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a><a href="#experiencias">Experiências</a></div>
       <a class="logo" href="#inicio"><img src="{{ url_for('static', filename='img/brand-logo.png') }}" alt="Mari Olivier"></a>
       <div class="nav-right"><a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Assinar agora</span></a></div>
       <button class="menu" aria-label="Menu">☰</button>
@@ -27,7 +27,7 @@
       <div class="hero-bg"></div>
       <div class="container hero-content reveal">
         <div class="hero-copy">
-          <h1>Transforme sua história,<br>transforme sua vida.</h1>
+          <h1>Seu próximo nível exige<br>uma nova estrutura interna.</h1>
           <p class="italic">Você tem o poder de mudar tudo.</p>
           <a class="premium-button premium-hero" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Começar minha transformação</span></a>
           <p class="micro">Mais de 15 anos unindo moda, imagem, comportamento e desenvolvimento humano.</p>
@@ -40,11 +40,27 @@
       <div class="container narrow center reveal">
         <p class="eyebrow">Apresentação</p>
         <h2>Uma jornada entre <span>imagem</span>,<br>identidade e transformação</h2>
-        <p>A imagem comunica antes mesmo das palavras. Nesta apresentação, Mari Olivier compartilha sua visão sobre como moda, comportamento, autoestima e presença podem transformar a forma como uma pessoa se vê, se posiciona e se conecta com o mundo.</p>
+        <p>A verdadeira transformação acontece quando mente, comportamento, comunicação e imagem passam a caminhar na mesma direção. Por meio de palestras, mentorias e experiências de desenvolvimento humano, Mari Olivier conduz pessoas a fortalecer sua identidade, ampliar sua presença, romper barreiras internas e ocupar seu lugar no mundo com autenticidade, confiança e propósito.</p>
       </div>
-      <div class="container video-box reveal">
-        <button class="play" aria-label="Assistir apresentação">▶</button>
-        <small>Thumbnail do vídeo será adicionada.</small>
+      <div class="container story-videos reveal" aria-label="Vídeos em formato stories">
+        <article class="story-card">
+          <video controls playsinline preload="metadata" poster="{{ url_for('static', filename='img/mari-portrait.jpg') }}">
+            <source src="{{ url_for('static', filename='videos/story-1.mp4') }}" type="video/mp4">
+          </video>
+          <div class="story-overlay"><span>01</span><strong>Presença</strong></div>
+        </article>
+        <article class="story-card">
+          <video controls playsinline preload="metadata" poster="{{ url_for('static', filename='img/mari-about.jpg') }}">
+            <source src="{{ url_for('static', filename='videos/story-2.mp4') }}" type="video/mp4">
+          </video>
+          <div class="story-overlay"><span>02</span><strong>Mentoria</strong></div>
+        </article>
+        <article class="story-card">
+          <video controls playsinline preload="metadata" poster="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}">
+            <source src="{{ url_for('static', filename='videos/story-3.mp4') }}" type="video/mp4">
+          </video>
+          <div class="story-overlay"><span>03</span><strong>Experiência</strong></div>
+        </article>
       </div>
       <div class="container trinity reveal">
         <div><strong>Moda</strong><small>como ferramenta de expressão</small></div>
@@ -96,7 +112,7 @@
           <h2>Quem é <span>Mari Olivier</span></h2>
           <p>Mari Olivier é Designer de Moda, Consultora de Imagem, Psicanalista, Mentora e Palestrante. Há mais de 15 anos atua nos universos da moda, imagem, comportamento e desenvolvimento humano, construindo uma trajetória dedicada a transformar conhecimento em experiências que fortalecem pessoas, marcas e histórias.</p>
           <p>Sua formação em Design de Moda, aliada às especializações em Consultoria de Imagem e Psicanálise, permite um olhar que vai além da estética. Para Mari, a imagem é uma extensão da identidade, e a verdadeira elegância nasce quando aparência, essência e comunicação caminham em harmonia.</p>
-          <div class="tags"><span>+15 anos de experiência</span><span>Designer de moda</span><span>Consultora de imagem</span><span>Psicanalista</span><span>Mentora e palestrante</span><span>Preparação de rainhas e soberanas</span></div>
+          <div class="tags"><span>+15 anos de experiência</span><span>Designer de moda</span><span>Consultora de imagem</span><span>Psicanalista</span><span>Mentora e palestrante</span></div>
           <div class="quote-card">Moda, imagem e comportamento como ferramentas de <span>transformação humana.</span></div>
         </div>
       </div>
@@ -120,17 +136,17 @@
         <p class="eyebrow">Experiências</p>
         <h2>Palestras, workshops e<br>experiências que conectam<br><span>imagem, presença e propósito</span></h2>
         <p class="lead">Mari Olivier desenvolve experiências para empresas, eventos, grupos, mulheres, equipes e projetos que desejam trabalhar imagem pessoal, comunicação, autoestima, posicionamento e comportamento de forma profunda, elegante e prática.</p>
-        <div class="gallery">
-          <figure class="wide"><img src="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}" alt="Workshop Tijucas"><figcaption>Workshop - Tijucas</figcaption></figure>
-          <figure><img src="{{ url_for('static', filename='img/palestra-corporativa.jpg') }}" alt="Palestra Corporativa"><figcaption>Palestra corporativa</figcaption></figure>
-          <figure><img src="{{ url_for('static', filename='img/evento-por-do-sol.jpg') }}" alt="Evento ao pôr do sol"><figcaption>Evento ao pôr do sol</figcaption></figure>
-          <figure><img src="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}" alt="Encontro de mulheres"><figcaption>Encontro de mulheres</figcaption></figure>
+        <div class="gallery gallery-three">
+          <figure><img src="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}" alt="Palestra Sicoob"><figcaption>PALESTRA - SICOOB</figcaption></figure>
+          <figure><img src="{{ url_for('static', filename='img/palestra-corporativa.jpg') }}" alt="Mentoria"><figcaption>MENTORIA</figcaption></figure>
+          <figure><img src="{{ url_for('static', filename='img/evento-por-do-sol.jpg') }}" alt="Evento"><figcaption>EVENTO</figcaption></figure>
         </div>
-        <div class="services">
+        <div class="services services-five">
           <article><small>01</small><h3>Palestras</h3><p>Temas sobre imagem pessoal, autoestima, elegância, comunicação, moda, comportamento e posicionamento.</p></article>
           <article><small>02</small><h3>Workshops</h3><p>Experiências práticas para grupos, equipes, marcas e mulheres aplicarem a imagem como ferramenta estratégica.</p></article>
           <article><small>03</small><h3>Eventos e desfiles</h3><p>Criação, direção e desenvolvimento de experiências que unem estética, propósito, moda e comunicação.</p></article>
           <article><small>04</small><h3>Rainhas e candidatas</h3><p>Trabalho voltado à postura, presença, elegância, comunicação, confiança e posicionamento.</p></article>
+          <article><small>05</small><h3>Participação especial</h3><p>Presença especial com Renner cantor em eventos, experiências e momentos que conectam imagem, arte e público.</p></article>
         </div>
         <div class="center event-cta"><a class="premium-button" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Levar Mari Olivier para o meu evento</span></a></div>
       </div>
