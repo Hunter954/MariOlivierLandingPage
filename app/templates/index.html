@@ -18,8 +18,15 @@
       <div class="nav-left"><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a><a href="#experiencias">Experiências</a></div>
       <a class="logo" href="#inicio"><img src="{{ url_for('static', filename='img/brand-logo.png') }}" alt="Mari Olivier"></a>
       <div class="nav-right"><a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Começar minha jornada</span></a></div>
-      <button class="menu" aria-label="Menu">☰</button>
+      <button class="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </nav>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+    <aside id="mobile-menu" class="mobile-drawer" aria-hidden="true">
+      <a href="#sobre">Sobre</a>
+      <a href="#mentoria">Mentorias</a>
+      <a href="#experiencias">Experiências</a>
+      <a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Começar minha jornada</span></a>
+    </aside>
   </header>
 
   <main>
@@ -39,7 +46,7 @@
     <section id="apresentacao" class="section intro">
       <div class="container narrow center reveal">
         <p class="eyebrow">Apresentação</p>
-        <h2>Todo novo nível<span>exige mais do que</span>,<br>conhecimento.</h2>
+        <h2>Todo <span>novo nível</span> exige<br>mais do que, <span>conhecimento</span>.</h2>
         <p>Exige consciência, posicionamento, comunicação, identidade e a coragem de romper padrões que já não sustentam o futuro que você deseja construir.</p>
         <p>Aqui, transformação não é sobre mudar quem você é. É sobre fortalecer quem você nasceu para ser.</p>
       </div>
