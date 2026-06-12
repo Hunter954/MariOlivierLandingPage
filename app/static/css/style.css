@@ -608,23 +608,31 @@ blockquote{
   object-position:22% center;
 }
 
+#contato .cta-copy{
+  width:min(1280px,calc(100% - 42px));
+}
 
-.cta-copy{
-  width:min(1100px,calc(100% - 42px));
-}
-.cta-copy h2{
-  max-width:980px;
+#contato .cta-message{
+  max-width:none;
   margin-inline:auto;
-  font-size:clamp(34px,4.9vw,66px);
-  line-height:0.98;
+  margin-bottom:18px;
+  font-size:clamp(24px,4vw,48px);
+  line-height:1.04;
+  letter-spacing:-0.02em;
+  white-space:nowrap;
 }
-.cta-copy p{
-  margin-top:18px;
+
+#contato .cta-copy p{
+  margin-top:12px;
 }
+
 @media(max-width:900px){
-  .cta-copy h2{
-    max-width:100%;
-    font-size:clamp(28px,8.2vw,44px);
+  #contato .cta-copy{
+    width:min(1100px,calc(100% - 42px));
+  }
+  #contato .cta-message{
+    font-size:clamp(28px,8vw,42px);
     line-height:1.02;
+    white-space:normal;
   }
 }
