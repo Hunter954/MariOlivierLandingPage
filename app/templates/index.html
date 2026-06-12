@@ -166,13 +166,14 @@
         <p class="lead">Mari Olivier desenvolve experiências para empresas, eventos, grupos, mulheres, equipes e projetos que desejam trabalhar imagem pessoal, comunicação, autoestima, posicionamento e comportamento de forma profunda, elegante e prática.</p>
         <div class="services services-mixed">
           <article><h3>Palestras</h3><p>Desenvolvimento de competências que fortalecem a comunicação, a liderança, o posicionamento e a performance humana.</p></article>
-          <figure class="service-photo"><img src="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}" alt="Palestra Sicoob"><figcaption>PALESTRA - SICOOB</figcaption></figure>
+          <figure class="service-photo"><img src="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}" alt="Palestra Sicoob"><figcaption>PALESTRA</figcaption></figure>
           <article><h3>Workshops</h3><p>Experiências práticas para fortalecer competências comportamentais, ampliar resultados e potencializar a atuação profissional e humana.</p></article>
           <figure class="service-photo"><img src="{{ url_for('static', filename='img/palestra-corporativa.jpg') }}" alt="Mentoria"><figcaption>MENTORIA</figcaption></figure>
           <article><h3>Eventos e Desfiles</h3><p>Criação, desenvolvimento e condução de experiências que conectam pessoas, marcas e propósito por meio da presença física e digital.</p></article>
           <figure class="service-photo"><img src="{{ url_for('static', filename='img/evento-por-do-sol.jpg') }}" alt="Evento"><figcaption>EVENTO</figcaption></figure>
           <article><h3>Presença e Representatividade</h3><p>Formação para o desenvolvimento da presença, da comunicação, da etiqueta, da postura e do posicionamento de pessoas que participam de concursos de beleza, representam marcas, instituições ou desejam aperfeiçoar sua atuação em ambientes de destaque e visibilidade.</p></article>
           <article><h3>A Jornada que Define Quem Somos</h3><p>Uma experiência conduzida por Mari Olivier e pelo cantor Renner, da dupla Rick & Renner, que une palestra e show em uma proposta exclusiva. Por meio de histórias, aprendizados, desenvolvimento humano, empreendedorismo e música ao vivo, a experiência inspira reflexões sobre trajetória, identidade, propósito e transformação.</p></article>
+          <figure class="service-photo"><img src="{{ url_for('static', filename='img/a-jornada.jpg') }}" alt="A Jornada"><figcaption>A JORNADA</figcaption></figure>
         </div>
         <div class="center event-cta"><a class="premium-button" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Levar Mari Olivier para o meu evento</span></a></div>
       </div>
@@ -182,19 +183,14 @@
       <div class="container faq-wrap reveal">
         <p class="eyebrow center-text">FAQ</p>
         <h2 class="center-text">Perguntas <span>frequentes</span></h2>
-        <details open><summary>A mentoria é apenas sobre roupas?</summary><p>Não. A mentoria trabalha imagem, identidade, autoestima, comunicação, comportamento, postura e posicionamento. A roupa é uma parte do processo, mas o objetivo é alinhar aparência e essência.</p></details>
-        <details><summary>A consultoria é indicada para empresas?</summary><p>Sim. O trabalho pode ser aplicado para equipes, lideranças, atendimento, eventos, posicionamento profissional e construção de imagem de marca.</p></details>
-        <details><summary>Existe atendimento individual?</summary><p>Sim. A mentoria individual é conduzida de forma personalizada, considerando história, objetivos, estilo de vida, comunicação e presença.</p></details>
-        <details><summary>Mari realiza palestras em eventos?</summary><p>Sim. Mari Olivier conduz palestras, workshops e experiências para eventos corporativos, encontros de mulheres, concursos e projetos especiais.</p></details>
-        <details><summary>A mentoria serve para concursos de beleza e soberanas?</summary><p>Sim. Há preparação de postura, presença, comunicação, elegância e posicionamento para rainhas, soberanas e candidatas.</p></details>
-        <details><summary>Como faço para contratar?</summary><p>Entre em contato pelo botão abaixo e conte o tipo de experiência desejada para receber orientação personalizada.</p></details>
+        <details open><summary>O que esta mentoria desenvolve?</summary><p>Desenvolve pessoas.</p><p>Mais do que aprimorar habilidades, esta mentoria fortalece identidade, amplia consciência, desperta potencialidades e promove uma transformação profunda na forma de pensar, agir e ocupar espaços.</p><p>Trabalhamos aquilo que sustenta toda grande mudança: autoconhecimento, clareza de propósito, postura diante da vida, inteligência relacional, segurança emocional, comunicação, presença e posicionamento.</p><p>É um processo que une desenvolvimento humano e estratégia para que cada indivíduo reconheça seu valor, rompa limitações invisíveis, amplie sua visão de si mesmo e assuma novos espaços com mais clareza, segurança, consciência e autenticidade.</p></details>
       </div>
     </section>
 
     <section id="contato" class="section cta redwash">
       <div class="container narrow center reveal">
-        <h2>Sua imagem pode abrir caminhos antes<br>mesmo da primeira <span>palavra.</span></h2>
-        <p>Descubra como alinhar aparência, essência e comunicação para expressar sua melhor versão com autenticidade, presença e significado.</p>
+        <h2>Mais do que desenvolver habilidades, desenvolvemos pessoas capazes de viver, liderar e prosperar com autenticidade, consciência e significado.</h2>
+        <p>Por Mari Olivier</p>
         <div class="cta-actions"><a class="premium-button" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20falar%20com%20Mari%20Olivier"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Falar com Mari Olivier</span></a><a class="premium-button premium-ghost" href="#experiencias"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero saber mais sobre palestras</span></a></div>
         <form class="lead-form" action="/contato" method="post">
           <input name="name" placeholder="Seu nome" required><input name="phone" placeholder="WhatsApp"><input name="email" placeholder="E-mail"><input name="interest" placeholder="Interesse: mentoria, palestra, workshop..."><textarea name="message" placeholder="Mensagem"></textarea><button class="premium-button" type="submit"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Enviar contato</span></button>
