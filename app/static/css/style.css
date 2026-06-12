@@ -607,3 +607,24 @@ blockquote{
 .service-photo-a-jornada img{
   object-position:22% center;
 }
+
+
+.cta-copy{
+  width:min(1100px,calc(100% - 42px));
+}
+.cta-copy h2{
+  max-width:980px;
+  margin-inline:auto;
+  font-size:clamp(34px,4.9vw,66px);
+  line-height:0.98;
+}
+.cta-copy p{
+  margin-top:18px;
+}
+@media(max-width:900px){
+  .cta-copy h2{
+    max-width:100%;
+    font-size:clamp(28px,8.2vw,44px);
+    line-height:1.02;
+  }
+}
