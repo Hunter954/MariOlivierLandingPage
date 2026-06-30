@@ -1012,3 +1012,56 @@ body{background:#070806;color:var(--text)}
     width:min(100%,92vw);
   }
 }
+
+/* Ajuste solicitado - mobile: manter a logomarca REIVILO inteira no topo do hero */
+@media(max-width:900px){
+  .hero{
+    min-height:920px !important;
+    height:auto !important;
+    display:block !important;
+    background:#050604 !important;
+  }
+
+  .hero-bg{
+    inset:0 0 auto 0 !important;
+    height:clamp(300px,58vw,430px) !important;
+    background-color:#050604 !important;
+    background-image:
+      linear-gradient(180deg,rgba(5,6,4,.00) 0%,rgba(5,6,4,.02) 42%,rgba(5,6,4,.40) 76%,#050604 100%),
+      url('../img/hero-bg.png') !important;
+    background-repeat:no-repeat !important;
+    background-size:100% auto !important;
+    background-position:center top !important;
+    transform:none !important;
+  }
+
+  .hero-content{
+    min-height:920px !important;
+    padding-top:clamp(405px,72vw,520px) !important;
+    padding-bottom:58px !important;
+    align-items:flex-start !important;
+  }
+
+  .hero-copy{
+    margin:0 auto !important;
+    padding:24px 18px 0 !important;
+    background:linear-gradient(180deg,rgba(8,9,6,.04) 0%,rgba(8,9,6,.58) 30%,rgba(8,9,6,.94) 100%) !important;
+  }
+}
+
+@media(max-width:560px){
+  .hero{
+    min-height:900px !important;
+  }
+
+  .hero-bg{
+    height:clamp(275px,72vw,340px) !important;
+    background-size:100% auto !important;
+    background-position:center top !important;
+  }
+
+  .hero-content{
+    min-height:900px !important;
+    padding-top:clamp(350px,102vw,415px) !important;
+  }
+}
