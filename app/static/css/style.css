@@ -1065,3 +1065,26 @@ body{background:#070806;color:var(--text)}
     padding-top:clamp(350px,102vw,415px) !important;
   }
 }
+
+/* Ajuste mobile REIVILO - ampliar fundo mantendo o lado esquerdo fixo e levando o logo para a direita */
+@media(max-width:900px){
+  .hero-bg{
+    background-size:112% auto !important;
+    background-position:left top !important;
+    height:clamp(305px,62vw,455px) !important;
+  }
+  .hero-content{
+    padding-top:clamp(420px,76vw,540px) !important;
+  }
+}
+
+@media(max-width:560px){
+  .hero-bg{
+    background-size:118% auto !important;
+    background-position:left top !important;
+    height:clamp(295px,77vw,365px) !important;
+  }
+  .hero-content{
+    padding-top:clamp(375px,108vw,440px) !important;
+  }
+}
