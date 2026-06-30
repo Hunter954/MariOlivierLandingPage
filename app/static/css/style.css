@@ -739,3 +739,97 @@ blockquote{
     width:min(430px,92vw);
   }
 }
+
+/* Ajustes finais REIVILO - paleta oliva/dourado, hero mais lateral e marca de fundo menor */
+:root{
+  --bg:#070806;
+  --bg2:#101207;
+  --panel:#15180b;
+  --panel2:#20220f;
+  --text:#f4ead7;
+  --muted:#c9b893;
+  --gold:#b89145;
+  --line:rgba(184,145,69,.25);
+  --soft:rgba(255,255,255,.035);
+  --shadow:0 30px 90px rgba(0,0,0,.52);
+}
+body{background:#070806;color:var(--text)}
+.site-bg{
+  background:
+    radial-gradient(circle at 9% 16%,rgba(116,97,41,.28),transparent 30%),
+    radial-gradient(circle at 80% 60%,rgba(55,62,28,.20),transparent 35%),
+    linear-gradient(180deg,#050604,#101306 52%,#060705);
+}
+.site-bg:after{background:linear-gradient(90deg,rgba(126,104,45,.15),transparent 24%,transparent 78%,rgba(28,34,15,.22));}
+.nav.scrolled{background:rgba(6,7,5,.72);border-bottom:1px solid rgba(184,145,69,.18)}
+.nav a{color:rgba(244,234,215,.78)}
+.nav a:hover{color:#d6b96e}
+.pill,.btn,.premium-button{
+  border-color:rgba(184,145,69,.62)!important;
+  color:#f3dfb2!important;
+  background:linear-gradient(180deg,rgba(75,41,16,.92),rgba(45,22,9,.96))!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),0 12px 36px rgba(0,0,0,.26)!important;
+}
+.pill:hover,.btn:hover,.premium-button:hover{background:linear-gradient(180deg,rgba(94,52,21,.98),rgba(57,27,10,.98))!important;}
+.hero{background:#050604;}
+.hero-bg{
+  background-color:#050604;
+  background-image:
+    linear-gradient(90deg,rgba(5,6,4,.02) 0%,rgba(5,6,4,.04) 48%,rgba(5,6,4,.45) 70%,rgba(5,6,4,.88) 100%),
+    linear-gradient(0deg,rgba(5,6,4,.90),rgba(5,6,4,0) 24%),
+    url('../img/hero-bg.png');
+  background-repeat:no-repeat;
+  background-size:auto 100%;
+  background-position:left center;
+  transform:none;
+}
+.hero-content.container{width:min(1360px,calc(100% - 42px));}
+.hero-content{justify-content:flex-end;}
+.hero-copy{margin-right:0;text-align:left;}
+.hero h1{color:#d6bea0;text-shadow:0 2px 28px rgba(0,0,0,.52);}
+.hero .italic{color:#f1e3cb;}
+.micro,.eyebrow,.section-line{color:rgba(244,234,215,.62)}
+.section h2 span,.hero h1 span,.quote-card span,.card i,.benefits li:before,.services small{color:#b89145}
+.lead,.intro p{color:#c9b893}
+.intro{background:linear-gradient(180deg,#0e1008,#121508)}
+.cards-section{background:#0b0d06}
+.about{background:#0a0c06}
+.experiences{background:#0d1007}
+.faq{background:linear-gradient(180deg,#101307,#070806)}
+.testimonials{background:radial-gradient(circle at 18% 12%,rgba(184,145,69,.10),transparent 28%),#070806!important}
+.testimonials-carousel:before{background:linear-gradient(90deg,#070806,transparent)!important}
+.testimonials-carousel:after{background:linear-gradient(270deg,#070806,transparent)!important}
+.trinity div,.card,.testimonial,.services article,.quote-card,details,.photo-placeholder,.intro-photo{
+  border-color:rgba(184,145,69,.20)!important;
+  background:rgba(255,255,255,.026)!important;
+}
+.card:hover,.testimonial:hover,.services article:hover{border-color:rgba(184,145,69,.46)!important;background:rgba(184,145,69,.055)!important;}
+.redwash{
+  background:
+    radial-gradient(circle at 74% 18%,rgba(91,82,34,.38),transparent 40%),
+    linear-gradient(140deg,#0b0d06,#1a1d0c 55%,#060705)!important;
+}
+.video-box,.photo-placeholder{
+  background:
+    radial-gradient(circle at 20% 10%,rgba(184,145,69,.18),transparent 28%),
+    linear-gradient(135deg,#121508,#25270f 65%,#070806)!important;
+}
+.video-box:before{background:rgba(9,10,6,.70)}
+.play{background:#caa457;color:#080905;box-shadow:0 0 46px rgba(202,164,87,.34)}
+.card p,.testimonial p,.services p,.about p,details p{color:#c8bb9d}
+.trinity strong{color:#b89145}.trinity small{color:#bfb08f}.section-line{color:#b89145}.tags span{border-color:rgba(184,145,69,.32);color:#d2c09a}.benefits li{border-bottom-color:rgba(184,145,69,.16);color:#d5c7a7}blockquote,.quote-card{color:#f5ecd8}summary:after{border-color:rgba(184,145,69,.35);color:#b89145}
+@media(min-width:1500px){
+  .hero-content.container{width:min(1500px,calc(100% - 42px));}
+  .hero-copy{margin-right:-1vw;}
+}
+@media(max-width:900px){
+  .hero-bg{
+    background-image:
+      linear-gradient(180deg,rgba(5,6,4,.08) 0%,rgba(5,6,4,.32) 44%,rgba(5,6,4,.86) 100%),
+      url('../img/hero-bg.png');
+    background-size:auto 100%;
+    background-position:22% center;
+  }
+  .hero-content.container{width:min(560px,calc(100% - 32px));}
+  .hero-copy{margin-right:0;text-align:center;}
+}
