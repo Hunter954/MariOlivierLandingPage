@@ -15,17 +15,17 @@
   <div class="site-bg"></div>
   <header class="nav glass">
     <nav class="nav-inner container">
-      <div class="nav-left"><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a><a href="#experiencias">Experiências</a></div>
+      <div class="nav-left"><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a></div>
       <a class="logo" href="#inicio"><img src="{{ url_for('static', filename='img/brand-logo.png') }}" alt="Mari Olivier"></a>
-      <div class="nav-right"><a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Começar minha jornada</span></a></div>
+      <div class="nav-right"><a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero fazer parte da REIVILO</span></a></div>
       <button class="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </nav>
     <div class="mobile-menu-backdrop" aria-hidden="true"></div>
     <aside id="mobile-menu" class="mobile-drawer" aria-hidden="true">
       <a href="#sobre">Sobre</a>
       <a href="#mentoria">Mentorias</a>
-      <a href="#experiencias">Experiências</a>
-      <a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Começar minha jornada</span></a>
+      
+      <a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero fazer parte da REIVILO</span></a>
     </aside>
   </header>
 
@@ -36,7 +36,7 @@
         <div class="hero-copy">
           <h1>Seu próximo nível<br class="desktop-title-break"> começa por uma<br class="desktop-title-break"> nova estrutura.</h1>
           <p class="italic">Você tem o poder de mudar tudo.</p>
-          <a class="premium-button premium-hero" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Começar minha jornada</span></a>
+          <a class="premium-button premium-hero" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero fazer parte da REIVILO</span></a>
           <p class="micro">Há mais de 15 anos conduzindo jornadas que unem desenvolvimento humano, comunicação, imagem, comportamento e psicanálise.</p>
         </div>
       </div>
@@ -50,32 +50,11 @@
         <p>Exige consciência, posicionamento, comunicação, identidade e a coragem de romper padrões que já não sustentam o futuro que você deseja construir.</p>
         <p>Aqui, transformação não é sobre mudar quem você é. É sobre fortalecer quem você nasceu para ser.</p>
       </div>
-      <div class="container story-videos reveal" aria-label="Vídeos em formato stories">
-        <article class="story-card">
-          <video controls playsinline preload="metadata" poster="{{ url_for('static', filename='img/mari-portrait.jpg') }}">
-            <source src="{{ url_for('static', filename='videos/story-1.mp4') }}" type="video/mp4">
-          </video>
-          <div class="story-overlay"><span>01</span><strong>Presença</strong></div>
-        </article>
-        <article class="story-card">
-          <video controls playsinline preload="metadata" poster="{{ url_for('static', filename='img/mari-about.jpg') }}">
-            <source src="{{ url_for('static', filename='videos/story-2.mp4') }}" type="video/mp4">
-          </video>
-          <div class="story-overlay"><span>02</span><strong>Mentoria</strong></div>
-        </article>
-        <article class="story-card">
-          <video controls playsinline preload="metadata" poster="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}">
-            <source src="{{ url_for('static', filename='videos/story-3.mp4') }}" type="video/mp4">
-          </video>
-          <div class="story-overlay"><span>03</span><strong>Experiência</strong></div>
-        </article>
+      <div class="container intro-photo-wrap reveal" aria-label="Imagem de apresentação Mari Olivier">
+        <div class="intro-photo">
+          <img src="{{ url_for('static', filename='img/mari-portrait.jpg') }}" alt="Mari Olivier">
+        </div>
       </div>
-      <div class="container trinity reveal">
-        <div><strong>Moda</strong><small>como ferramenta de expressão</small></div>
-        <div><strong>Imagem</strong><small>como extensão da identidade</small></div>
-        <div><strong>Presença</strong><small>como força de posicionamento</small></div>
-      </div>
-      <p class="container section-line">Assista e descubra como a sua imagem pode contar uma nova história.</p>
     </section>
 
     <section id="mentoria" class="section cards-section">
@@ -159,26 +138,6 @@
       </div>
     </section>
 
-    <section id="experiencias" class="section experiences">
-      <div class="container reveal">
-        <p class="eyebrow">Experiências</p>
-        <h2>Palestras, workshops e<br>experiências que conectam<br><span>imagem, presença e propósito</span></h2>
-        <p class="lead">Mari Olivier desenvolve experiências para empresas, eventos, grupos, mulheres, equipes e projetos que desejam trabalhar imagem pessoal, comunicação, autoestima, posicionamento e comportamento de forma profunda, elegante e prática.</p>
-        <div class="services services-mixed">
-          <article><h3>Palestras</h3><p>Desenvolvimento de competências que fortalecem a comunicação, a liderança, o posicionamento e a performance humana.</p></article>
-          <figure class="service-photo"><img src="{{ url_for('static', filename='img/workshop-tijucas.jpg') }}" alt="Palestra Sicoob"><figcaption>PALESTRA</figcaption></figure>
-          <article><h3>Workshops</h3><p>Experiências práticas para fortalecer competências comportamentais, ampliar resultados e potencializar a atuação profissional e humana.</p></article>
-          <figure class="service-photo"><img src="{{ url_for('static', filename='img/palestra-corporativa.jpg') }}" alt="Mentoria"><figcaption>MENTORIA</figcaption></figure>
-          <article><h3>Eventos e Desfiles</h3><p>Criação, desenvolvimento e condução de experiências que conectam pessoas, marcas e propósito por meio da presença física e digital.</p></article>
-          <figure class="service-photo"><img src="{{ url_for('static', filename='img/evento-por-do-sol.jpg') }}" alt="Evento"><figcaption>EVENTO</figcaption></figure>
-          <article><h3>Presença e Representatividade</h3><p>Formação para o desenvolvimento da presença, da comunicação, da etiqueta, da postura e do posicionamento de pessoas que participam de concursos de beleza, representam marcas, instituições ou desejam aperfeiçoar sua atuação em ambientes de destaque e visibilidade.</p></article>
-          <figure class="service-photo service-photo-a-jornada"><img src="{{ url_for('static', filename='img/a-jornada.jpg') }}" alt="A Jornada"><figcaption>A JORNADA</figcaption></figure>
-          <article><h3>A Jornada que Define Quem Somos</h3><p>Uma experiência conduzida por Mari Olivier e pelo cantor Renner, da dupla Rick & Renner, que une palestra e show em uma proposta exclusiva. Por meio de histórias, aprendizados, desenvolvimento humano, empreendedorismo e música ao vivo, a experiência inspira reflexões sobre trajetória, identidade, propósito e transformação.</p></article>
-        </div>
-        <div class="center event-cta"><a class="premium-button" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Levar Mari Olivier para o meu evento</span></a></div>
-      </div>
-    </section>
-
     <section class="section faq">
       <div class="container faq-wrap reveal">
         <p class="eyebrow center-text">FAQ</p>
@@ -193,10 +152,7 @@
           desenvolvemos pessoas capazes de viver, liderar <br>
           e prosperar com autenticidade, consciência e significado.</h2>
         <p>Por Mari Olivier</p>
-        <div class="cta-actions"><a class="premium-button" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20falar%20com%20Mari%20Olivier"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Falar com Mari Olivier</span></a><a class="premium-button premium-ghost" href="#experiencias"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero saber mais sobre palestras</span></a></div>
-        <form class="lead-form" action="/contato" method="post">
-          <input name="name" placeholder="Seu nome" required><input name="phone" placeholder="WhatsApp"><input name="email" placeholder="E-mail"><input name="interest" placeholder="Interesse: mentoria, palestra, workshop..."><textarea name="message" placeholder="Mensagem"></textarea><button class="premium-button" type="submit"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Enviar contato</span></button>
-        </form>
+        <div class="cta-actions single-cta"><a class="premium-button" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20preciso%20viver%20isso"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Preciso viver isso</span></a></div>
       </div>
     </section>
   </main>
