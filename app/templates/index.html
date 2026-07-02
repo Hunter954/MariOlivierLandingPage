@@ -12,12 +12,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+  {% set whatsapp_url = 'https://wa.me/554998012910?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20mentoria%20da%20Mari%20Olivier' %}
   <div class="site-bg"></div>
   <header class="nav glass">
     <nav class="nav-inner container">
       <div class="nav-left"><a href="#sobre">Sobre</a><a href="#mentoria">Mentorias</a></div>
       <a class="logo" href="#inicio"><img src="{{ url_for('static', filename='img/brand-logo.png') }}" alt="Mari Olivier"></a>
-      <div class="nav-right"><a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Solicitar participação</span></a></div>
+      <div class="nav-right"><a class="premium-button premium-nav" href="{{ whatsapp_url }}" target="_blank" rel="noopener"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Solicitar participação</span></a></div>
       <button class="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </nav>
     <div class="mobile-menu-backdrop" aria-hidden="true"></div>
@@ -25,7 +26,7 @@
       <a href="#sobre">Sobre</a>
       <a href="#mentoria">Mentorias</a>
       
-      <a class="premium-button premium-nav" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Solicitar participação</span></a>
+      <a class="premium-button premium-nav" href="{{ whatsapp_url }}" target="_blank" rel="noopener"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Solicitar participação</span></a>
     </aside>
   </header>
 
@@ -36,7 +37,7 @@
         <div class="hero-copy">
           <h1>Seu próximo nível<br class="desktop-title-break"> começa por uma<br class="desktop-title-break"> nova estrutura.</h1>
           <p class="italic">Você tem o poder de mudar tudo.</p>
-          <a class="premium-button premium-hero" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Solicitar participação</span></a>
+          <a class="premium-button premium-hero" href="{{ whatsapp_url }}" target="_blank" rel="noopener"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Solicitar participação</span></a>
           <p class="micro">Mais de quinze anos desenvolvendo pessoas, fortalecendo lideranças e conduzindo processos que unem identidade, comunicação, comportamento e posicionamento humano.</p>
         </div>
       </div>
@@ -87,7 +88,7 @@
           </ul>
         </div>
         <blockquote>“A verdadeira transformação começa quando você deixa de apenas se adaptar ao mundo e passa a ocupar o seu lugar com consciência, presença e verdade.”</blockquote>
-        <div class="center"><a class="premium-button" href="#contato"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero viver essa experiência</span></a></div>
+        <div class="center"><a class="premium-button" href="{{ whatsapp_url }}" target="_blank" rel="noopener"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Quero viver essa experiência</span></a></div>
       </div>
     </section>
 
@@ -151,7 +152,7 @@
         <h2 class="cta-message">Mais do que desenvolver habilidades,<br>
           desenvolvemos pessoas capazes de viver, liderar <br>
           e prosperar com autenticidade, consciência e significado.</h2>
-        <div class="cta-actions single-cta"><a class="premium-button" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20preciso%20viver%20isso"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Preciso viver isso</span></a></div>
+        <div class="cta-actions single-cta"><a class="premium-button" href="{{ whatsapp_url }}" target="_blank" rel="noopener"><span class="premium-dots" aria-hidden="true"></span><i class="bi bi-stars premium-icon" aria-hidden="true"></i><span class="premium-text">Preciso viver isso</span></a></div>
       </div>
     </section>
   </main>
