@@ -1088,3 +1088,68 @@ body{background:#070806;color:var(--text)}
     padding-top:clamp(375px,108vw,440px) !important;
   }
 }
+
+
+/* Ajuste solicitado - frase do hero e aumento de fonte geral no mobile */
+.hero .hero-structure{
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  line-height:1.15;
+  max-width:680px;
+}
+
+@media(max-width:900px){
+  body{font-size:19px;}
+  p,
+  li,
+  .lead,
+  .intro p,
+  .card p,
+  .testimonial p,
+  .services p,
+  .about p,
+  details p{
+    font-size:18px;
+    line-height:1.78;
+  }
+  .hero h1{
+    font-size:clamp(48px,13.3vw,64px)!important;
+  }
+  .hero .italic,
+  .hero .hero-structure{
+    font-size:clamp(24px,5.9vw,32px)!important;
+    line-height:1.18;
+    letter-spacing:.045em;
+  }
+  .hero .micro,
+  .micro,
+  .eyebrow,
+  .section-line,
+  .gallery figcaption,
+  .testimonial small,
+  .tags span{
+    font-size:14px!important;
+  }
+  .section h2{
+    font-size:clamp(46px,12.3vw,76px);
+  }
+  .card h3,
+  .services h3{
+    font-size:29px;
+  }
+  summary{
+    font-size:24px;
+  }
+  .premium-text{
+    font-size:clamp(1.03rem,3.7vw,1.23rem);
+  }
+  .nav a{
+    font-size:13px;
+  }
+}
+
+@media(max-width:560px){
+  .hero .hero-structure{
+    max-width:360px;
+  }
+}
