@@ -619,7 +619,9 @@ blockquote{
   font-size:clamp(24px,4vw,48px);
   line-height:1.04;
   letter-spacing:-0.02em;
-  white-space:nowrap;
+  white-space:normal;
+  text-wrap:balance;
+  overflow-wrap:anywhere;
 }
 
 #contato .cta-copy p{
@@ -1291,4 +1293,32 @@ body{background:#070806;color:var(--text)}
   .essence-pillars article{padding:26px 22px;}
   .essence-copy{padding:30px 22px;}
   .essence-closing{padding:28px 22px;}
+}
+
+
+/* Correção do CTA final e ícones de contato */
+#contato .cta-message{
+  max-width:1120px!important;
+  white-space:normal!important;
+  text-wrap:balance;
+  overflow-wrap:normal;
+}
+#contato .cta-message span{
+  color:inherit;
+}
+.social span{
+  font-size:15px;
+  transition:transform .22s ease,border-color .22s ease,background .22s ease;
+}
+.social span:hover{
+  transform:translateY(-2px);
+  border-color:rgba(184,145,69,.58)!important;
+  background:rgba(184,145,69,.08)!important;
+}
+.social i{
+  display:block;
+  line-height:1;
+}
+@media(max-width:900px){
+  #contato .cta-message br{display:none;}
 }
